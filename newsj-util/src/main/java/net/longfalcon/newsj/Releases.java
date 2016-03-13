@@ -169,8 +169,7 @@ public class Releases {
 
         int retcount = 0;
 
-        String nzbPath = site.getNzbPath();
-        Directory nzbBaseDir = fileSystemService.getDirectory(nzbPath);
+        Directory nzbBaseDir = fileSystemService.getDirectory("/nzbs");
 
         checkRegexesUptoDate(site.getLatestRegexUrl(), site.getLatestRegexRevision());
 

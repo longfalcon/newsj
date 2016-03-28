@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2015. Sten Martinez
+ * Copyright (c) 2016. Sten Martinez
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -43,6 +43,14 @@ public interface ReleaseDAO {
                                                  String orderByField, boolean descending,
                                                  int offset, int pageSize);
 
+    Long searchCountByCategoriesMaxAgeAndGroup(String[] searchTokens, Collection<Integer> categoryIds, Date maxAge,
+                                               Collection<Integer> excludedCategoryIds, Long groupId);
+
+    List<Release> searchByCategoriesMaxAgeAndGroup(String[] searchTokens, Collection<Integer> categoryIds, Date maxAge,
+                                                   Collection<Integer> excludedCategoryIds, Long groupId,
+                                                   String orderByField, boolean descending,
+                                                   int offset, int pageSize);
+
     void deleteByGroupId(long groupId);
 
     void deleteRelease(Release release);
@@ -52,6 +60,8 @@ public interface ReleaseDAO {
     Release findByReleaseId(long releaseId);
 
     List<Object[]> findRecentlyAddedReleaseCategories();
+
+    List<Release> findByGuids(String[] guids);
 
     List<Release> findReleasesBeforeDate(Date before);
 
@@ -76,4 +86,6 @@ public interface ReleaseDAO {
     void updateRelease(Release release);
 
     List<Release> searchReleasesByNameExludingCats(List<String> searchTokens, int limit, Collection<Integer> excludedCategoryIds);
+
+    List<Long> findReleaseGroupIds();
 }

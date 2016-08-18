@@ -90,5 +90,12 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.mockito:mockito-all:1.10.8" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.apache.derby:derby:10.12.1.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.derby:derbyclient:10.12.1.1" level="project" />
+    <orderEntry type="library" name="Maven: com.oracle.jdbc:ojdbc7:12.1.0.2" level="project" />
+    <orderEntry type="library" name="Maven: com.oracle.jdbc:xdb6:12.1.0.2" level="project" />
+    <orderEntry type="library" name="Maven: com.oracle.jdbc:orai18n:12.1.0.2" level="project" />
+    <orderEntry type="library" name="Maven: com.oracle.jdbc:xmlparserv2:12.1.0.2" level="project" />
+    <orderEntry type="library" name="Maven: com.oracle.jdbc:oraclepki:12.1.0.2" level="project" />
+    <orderEntry type="library" name="Maven: com.oracle.jdbc:osdt_cert:12.1.0.2" level="project" />
+    <orderEntry type="library" name="Maven: com.oracle.jdbc:osdt_core:12.1.0.2" level="project" />
   </component>
 </module>
